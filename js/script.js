@@ -10,3 +10,18 @@ const bird = {
     }
   }
 };
+
+bird.eat = function () {
+  if (this.hungerScale === 0) {
+    console.log(`${this.name} is full and happy!`);
+  } else {
+    this.hungerScale -= 1;
+    console.log ("Nom nom nom!");
+  }
+};
+
+bird.eat();
+console.log(bird.isHappy());
+
+bird.eat();
+console.log(bird.isHappy());
